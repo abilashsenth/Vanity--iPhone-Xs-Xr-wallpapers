@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="130sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/i"
+        android:src="@drawable/logo_splash" />
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="600sp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginStart="30sp"
+                android:layout_width="150sp"
+                android:layout_height="450sp"
+                android:layout_below="@id/i"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="59dp"
+                android:id="@+id/iphonexs"
+                android:onClick="selectDevice"
+                android:src="@drawable/iphone_xs" />
+            <ImageView
+                android:layout_width="190sp"
+                android:layout_height="450sp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="59dp"
+                android:layout_below="@id/i"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/iphonexsmax"
+                android:onClick="selectDevice"
+                android:src="@drawable/iphone_xsmax" />
+
+            <ImageView
+                android:layout_width="160sp"
+                android:layout_height="450sp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="59dp"
+                android:layout_below="@id/i"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/iphonexr"
+                android:onClick="selectDevice"
+                android:src="@drawable/iphone_xr" />
+
+            <ImageView
+                android:layout_width="160sp"
+                android:layout_height="450sp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="59dp"
+                android:layout_below="@id/i"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/iphonex"
+                android:onClick="selectDevice"
+                android:src="@drawable/iphone_x" />
+
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/footer"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+
+
+
+
+
+</RelativeLayout>
