@@ -16,6 +16,15 @@
         android:id="@+id/i"
         android:src="@drawable/logo_splash" />
 
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="80sp"
+        android:layout_above="@+id/j"
+        android:elevation="5sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50sp"
+        android:onClick="useLive"
+        android:src="@drawable/uselive" />
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
@@ -84,6 +93,7 @@
 
     <ImageView
         android:layout_alignParentBottom="true"
+        android:id="@+id/j"
         android:layout_margin="50sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,7 +107,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-7635386706517792/3912994666">
     </com.google.android.gms.ads.AdView>
 
 

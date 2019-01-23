@@ -1,6 +1,8 @@
 package com.thenextbiggeek.iphonexsxrwallpapers;
 
 import android.Manifest;
+import android.app.WallpaperManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -22,11 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkForPermissions();
-        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+
+
+
+
     }
 
     int requestCode = 30;
@@ -87,4 +88,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void useLive(View view) {
+        Intent intent = new Intent(
+                WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
+        intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
+                new ComponentName(this, GIFWallpaperService.class));
+        startActivity(intent);
+
+    }
 }

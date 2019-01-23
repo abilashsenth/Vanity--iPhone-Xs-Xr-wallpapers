@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" >
+    </uses-feature>
 
     <application
         android:allowBackup="true"
@@ -30,7 +34,22 @@
         </activity>
         <activity android:name=".SelectorActivity" />
         <activity android:name=".FinalActivity" />
-        <activity android:name=".LiveWallpaperActivity"></activity>
+
+
+    <service
+        android:name=".GIFWallpaperService"
+        android:enabled="true"
+        android:label="GIF Wallpaper"
+        android:permission="android.permission.BIND_WALLPAPER" >
+        <intent-filter>
+            <action android:name="android.service.wallpaper.WallpaperService"/>
+        </intent-filter>
+        <meta-data
+            android:name="android.service.wallpaper"
+            android:resource="@xml/wallpaper" >
+        </meta-data>
+    </service>
+
     </application>
 
 </manifest>
